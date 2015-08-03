@@ -29,7 +29,11 @@ sequelize.sync().then(function(){
             Quiz.create({
                 pregunta:"capital de Italia",
                 respuesta:"Roma"
-            }).success(function(){
+            });
+            Quiz.create({
+                pregunta:"capital de Portugal",
+                respuesta:"Lisboa"
+            }).then(function(){
                 console.log("BDD Inicializada.")
             });
         };
